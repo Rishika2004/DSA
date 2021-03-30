@@ -28,11 +28,13 @@ public class GenerateAllValidParenthesis {
 			return 1;
 		}
 		
+		//for n=3, "((((" will not make valid pairs
+		if(cob > n)
+			return 0; 				
+		
+		//If there is no opening bracket corresponding to any closing bracket, then this can't make valid parenthesis.
 		if(ccb > cob)
 			return 0;
-		
-		if(cob > n)
-			return 0; 
 		
 		int count = 0;
 		count += generateParenthesis(n, osf + "(", cob+1, ccb);
