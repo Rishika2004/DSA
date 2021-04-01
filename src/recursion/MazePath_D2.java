@@ -23,7 +23,7 @@ public class MazePath_D2 {
 		return mazePath(1, 1, n, "");
 	}
 	
-	public static int mazePath(int cr, int cc, int n, String osf)
+	private static int mazePath(int cr, int cc, int n, String osf)
 	{
 		if(cr == n && cc == n)
 		{

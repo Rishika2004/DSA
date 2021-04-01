@@ -28,45 +28,45 @@ public class Keypad_return {
 		return ans;
 	}
 	
-	public static String getcode(int n)
+	private static String getcode(int n)
 	{
 		String s[] = {"","","abc","def","ghi","jkl","mno","pqrs","tuv","wxyz"};
 		return s[n];
 	}
 	
-	public static String get(int n)
-	{
-		String ans = "";
-		switch(n)
-		{
-			case 2:
-				ans = "abc";
-				break;
-			case 3:
-				ans = "def";
-				break;
-			case 4:
-				ans = "ghi";
-				break;
-			case 5:
-				ans = "jkl";
-				break;
-			case 6:
-				ans = "mno";
-				break;
-			case 7:
-				ans = "pqrs";
-				break;
-			case 8:
-				ans = "tuv";
-				break;
-			case 9:
-				ans = "wxyz";
-				break;
-		}
-		return ans;
-	}
-	
+//	private static String get(int n)
+//	{
+//		String ans = "";
+//		switch(n)
+//		{
+//			case 2:
+//				ans = "abc";
+//				break;
+//			case 3:
+//				ans = "def";
+//				break;
+//			case 4:
+//				ans = "ghi";
+//				break;
+//			case 5:
+//				ans = "jkl";
+//				break;
+//			case 6:
+//				ans = "mno";
+//				break;
+//			case 7:
+//				ans = "pqrs";
+//				break;
+//			case 8:
+//				ans = "tuv";
+//				break;
+//			case 9:
+//				ans = "wxyz";
+//				break;
+//		}
+//		return ans;
+//	}
+//	
 	public static void main(String[] args)
 	{
 		String ans[] = keypad(79);

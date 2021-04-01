@@ -9,7 +9,7 @@ public class Keypad_print {
 		keypad(n,"");
 	}
 	
-	public static void keypad(int n,String output)
+	private static void keypad(int n,String output)
 	{
 		if(n==0)
 		{
@@ -26,7 +26,7 @@ public class Keypad_print {
 		}
 	}
 	
-	public static String getcode(int n)
+	private static String getcode(int n)
 	{
 		String choice[] = {"","","abc","def","ghi","jkl","mno","pqrs","tuv","wxyz"};
 		return choice[n];

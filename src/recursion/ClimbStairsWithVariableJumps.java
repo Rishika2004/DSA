@@ -28,13 +28,13 @@ public class ClimbStairsWithVariableJumps {
 		sc.close();
 	}
 	
-	private static int climbingStairs(int n, int[] arr) {
+	public static int climbingStairs(int n, int[] arr) {
 		
 		return climbingStairs(0, arr, n);
 	}
 
 
-	public static int climbingStairs(int current, int arr[], int n)
+	private static int climbingStairs(int current, int arr[], int n)
 	{
 		//Positive base case
 		if(current == n)
