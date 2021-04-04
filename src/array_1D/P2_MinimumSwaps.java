@@ -32,18 +32,18 @@ public class P2_MinimumSwaps {
 		int i=0;
 		while(i < a.length)
 		{
-			//The possibility to execute this if condition is O(n)
-			//Maximum n-1 swaps possible
+			//Minimum n-1 swaps can be possible for worst case
+			//Worst case:
 			//Sample Input
 			//10
 			//10 1 2 3 4 5 6 7 8 9
 			//Sample Output
 			//9
-			//This test is worst case scenario. Because the maximum n-1 swaps can be possible to sort an array.
+			//This test is worst case scenario. Because here minimum n-1 swaps will be required to sort an array.
 			//In this test case, if block will execute n-1 -> O(n) time
 			//and else block will execute for remaining n-1 elements, because for all others a[i] = i+1, thst's why it will just increment the value of i. So, else block will execute n-1 -> O(n) time
 			//So, the total time complexity : n-1(if block) + n-1(else block) = 2n - 2 = O(n) 
-			//Dry run the code, to understand it better.
+			//Dry run the code to understand it better.
 			if(a[i] != i+1)
 			{
 				int temp = a[a[i]-1];
