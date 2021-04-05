@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 //Sample Output
 //3
-public class P2_MinimumSwaps {
+public class P02_MinimumSwaps {
 
 	public static void main(String[] args) {
 		

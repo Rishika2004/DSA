@@ -11,7 +11,7 @@ import java.util.Scanner;
 //Sample Output
 //0 0 0 1 1 1 1
 
-public class P5_SortAnArrayOf0sAnd1s {
+public class P05_SortAnArrayOf0sAnd1s {
 
 public static void main(String[] args) {
 		

@@ -25,7 +25,7 @@ import java.util.Scanner;
 //Must read this article, amazing for understand this concept
 //Medium article link : https://medium.com/trick-the-interviwer/next-greater-permutation-bb12e014e797 
 
-public class P8_NextPermutation {
+public class P07_NextPermutation {
 
 	public static void main(String[] args) {
 		
@@ -48,32 +48,48 @@ public class P8_NextPermutation {
 		sc.close();
 	}
 	
-//Before moving onto this algorithm, first read the medium's article.
-//Observe the test cases(case 1, case 2) explained in that and then move to this algorithm
+	//	nums[] = {3, 2, 1} -> this is is the last permutation of {1, 2, 3}
+	//	nums[] = {1, 4, 3, 2} -> In this {4, 3, 2} is the last permutation of {2, 3, 4}
+	//	Means now we have to find permutation for next greater element 2 {2, 1, 3, 4}
+	//  because when we find permutations using recursion, what we will do?
+	//  a[] = {1, 2, 3, 4}
+	//  Firstly, We find all permutations of {2, 3, 4} and add 1 at beginning of all of them.
+	//  Then we find all permutations of {1, 3, 4} and add 2 at beginning of all of them.
+	// 	Then we find all permutations of {1, 2, 4} and add 2 at beginning of all of them.
+	//  and so on...
 	
-//	Algorithm The steps to solve this problem:
-//
-//	1)Scan from right to left, find the first element that is less than its previous one.
-//
-//		4 5 6 3 2 1 
-//		  |
-//		  p
-//		
-//	2)Scan from right to left, find the first element that is greater than p.
-//
-//		4 5 6 3 2 1 
-//		    |
-//		    q
-//	
-//	3)Swap p and q
-//
-//		4 5 6 3 2 1 
-//		swap
-//		4 6 5 3 2 1 
-//
-//	4)Reverse elements [p+1, nums.length]
-//
-//		4 6 1 2 3 5
+	//	nums[] = {1, 4, 3, 2} -> In this {4, 3, 2} is the last permutation of {2, 3, 4}
+	//  Means we have found all permutations corresponding to 1.
+	//	so, now we have to find permutation for next greater element 2 : 2 + permuationsOf({1, 3, 4})
+	//  {1, 4, 3, 2} -> next Permutation -> {2, 1, 3, 4}
+	//	Firstly, replace 1 with next greater element 2 -> {2, 4, 3, 1}
+	//	After 2, the remaining digits should be minimum
+	//	We know that, after 2 all digits are in decreasing order
+	//	so, we just reverse them -> {2, 1, 3, 4}
+	
+	//	Algorithm The steps to solve this problem:
+	//
+	//	1)Scan from right to left, find the first element that is less than its previous one.
+	//
+	//		4 5 6 3 2 1 
+	//		  |
+	//		  p
+	//		
+	//	2)Scan from right to left, find the first element that is greater than p.
+	//
+	//		4 5 6 3 2 1 
+	//		    |
+	//		    q
+	//	
+	//	3)Swap p and q
+	//
+	//		4 5 6 3 2 1 
+	//		swap
+	//		4 6 5 3 2 1 
+	//
+	//	4)Reverse elements [p+1, nums.length]
+	//
+	//		4 6 1 2 3 5
 
 	public static void nextPermutation(int nums[])
 	{

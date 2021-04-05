@@ -22,7 +22,7 @@ import java.util.Arrays;
 //Array = {5, 7, 9, 1, 2, 4, 6 ,8 ,3}. Target number = 10. 
 //Find any three number in the given array which sum to target number.
 
-public class P3_TargetSumTriplet {
+public class P03_TargetSumTriplet {
 
 	public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

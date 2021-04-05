@@ -32,7 +32,7 @@ import java.util.Scanner;
 //Then use these pre-computed values to find the amount of water in every array element.
 
 
-public class P7_RainWaterTrapping {
+public class P08_RainWaterTrapping {
 
 	public static void main(String[] args) {
 		
@@ -93,7 +93,7 @@ public class P7_RainWaterTrapping {
 	public static int maxWater_Optimized(int a[])
 	{
 		int l = 0, r = a.length-1;
-        int lMax = 0, rMax = 0;
+		int lMax = 0, rMax = 0;
         
         int total = 0;
         while(l < r)

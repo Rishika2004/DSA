@@ -18,7 +18,7 @@ import java.util.Scanner;
 //Explanation
 //122 is sum of 1, 5, 7, 8, 10, 12, 15, 30, 34
 
-public class P1_MaximumSumPathInTwoArrays {
+public class P01_MaximumSumPathInTwoArrays {
 
 	public static void main(String[] args) {
 		

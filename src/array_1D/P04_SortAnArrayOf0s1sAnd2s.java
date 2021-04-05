@@ -12,7 +12,7 @@ import java.util.Scanner;
 //Sample Output
 //0 1 1 2 2
 
-public class P4_SortAnArrayOf0s1sAnd2s {
+public class P04_SortAnArrayOf0s1sAnd2s {
 
 	public static void main(String[] args) {
 		

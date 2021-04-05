@@ -13,7 +13,7 @@ import java.util.Scanner;
 
 //Sample Output
 //1 0 0 0 0
-public class P6_0sAtEnd {
+public class P06_0sAtEnd {
 
 	public static void main(String[] args) {
 		
