@@ -44,6 +44,7 @@ public class P11_ProductOfArrayExceptItSelf {
 		int left[] = new int[n];
 		int right[] = new int[n];
 		
+		//at each index, we store the product of all elements from left side except that element.
 		left[0] = 1;
 		for(int i=1; i<n; i++)
 		{
