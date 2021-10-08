@@ -1,5 +1,6 @@
 package backtracking;
-//You are given n queens and m boxes. you need to print all possible permutations to arrange these n queens into m boxes.
+//You are given n queens and m boxes. 
+//you need to print all possible permutations to arrange these n queens into m boxes.
 //In short here we need to find nPr.
 
 //Sample Input:
@@ -33,15 +34,19 @@ public class QueenPermutation1D {
 		sc.close();
 	}
 	
+	//n -> queens
+	//m -> boxes
 	public static void queenPermutation(int n, int m)
 	{
 		boolean boxes[] = new boolean[m];
-		queenPermutation(boxes, 0, n, m, "");
+		queenPermutation(n, m, 0, boxes, "");
 	}
 	
-	private static void queenPermutation(boolean[] boxes, int cur, int n, int m, String osf)
+	//qpsf -> queen places so far
+	//osf -> output so far
+	public static void queenPermutation(int n, int m, int qpsf, boolean boxes[], String osf)
 	{
-		if(cur == n)
+		if(qpsf == n)
 		{
 			System.out.println(osf);
 			return;
@@ -52,7 +57,7 @@ public class QueenPermutation1D {
 			if(!boxes[i])
 			{
 				boxes[i] = true;
-				queenPermutation(boxes, cur+1, n, m, osf + "q" + cur + "b" + i + " ");
+				queenPermutation(n, m, qpsf + 1, boxes, osf + "q" + qpsf + "b" + i + " ");
 				boxes[i] = false;
 			}
 		}

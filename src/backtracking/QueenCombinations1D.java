@@ -4,6 +4,21 @@ import java.util.Scanner;
 
 //You are given n queens and m boxes. you need to print all possible combinations of arrangement of these n queens into m boxes.
 //In short, Here we need to find nCr.
+
+//Sample Input 
+//2 4
+//(2 -> total queens -> q0, q1)
+//(4 -> total boxes -> b0, b1, b2, b3)
+
+//Sample Output
+//q0b0 q1b1 
+//q0b0 q1b2 
+//q0b0 q1b3 
+//q0b1 q1b2 
+//q0b1 q1b3 
+//q0b2 q1b3 
+
+
 public class QueenCombinations1D {
 
 	public static void main(String[] args) {
@@ -15,14 +30,16 @@ public class QueenCombinations1D {
 		sc.close();
 	}
 	
+	//n -> queens
+	//m -> boxes
 	public static void queenCombinations(int n, int m)
 	{
-		queenCombinations(0, n, m, "", -1);
+		queenCombinations(n, m, 0, -1, "");
 	}
-
-	private static void queenCombinations(int cur, int n, int m, String osf, int lastBoxUsed) {
 	
-		if(cur == n)
+	public static void queenCombinations(int n, int m, int qpsf, int lastBoxUsed, String osf)
+	{
+		if(qpsf == n)
 		{
 			System.out.println(osf);
 			return;
@@ -30,7 +47,7 @@ public class QueenCombinations1D {
 		
 		for(int i=lastBoxUsed+1; i<m; i++)
 		{
-			queenCombinations(cur+1, n, m, osf + "q" + cur + "b" + i + " ", i);
+			queenCombinations(n, m, qpsf+1, i, osf + "q" + qpsf + "b" + i + " ");
 		}
-	}		
+	}
 }
